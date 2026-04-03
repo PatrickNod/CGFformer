@@ -43,30 +43,6 @@ The experiments in this paper utilize the WorldView-3 (WV3) and GaoFen-2 (GF-2) 
 
 🔗 **[liangjiandeng/PanCollection: Pansharpening Dataset](https://github.com/liangjiandeng/PanCollection)**
 
-```bibtex
-@ARTICLE{dengjig2022,
-    author={邓良剑，冉燃，吴潇，张添敬},
-    journal={中国图象图形学报},
-    title={遥感图像全色锐化的卷积神经网络方法研究进展},
-    year={2022},
-    volume={},
-    number={9},
-    pages={},
-    doi={10.11834/jig.220540}
-}
-
-@ARTICLE{deng2022vivone,
-    author={L. -J. Deng, G. Vivone, M. E. Paoletti, G. Scarpa, J. He, Y. Zhang, J. Chanussot, and A. Plaza},
-    journal={IEEE Geoscience and Remote Sensing Magazine}, 
-    title={Machine Learning in Pansharpening: A Benchmark, from Shallow to Deep Networks}, 
-    year={2022},
-    volume={10},
-    number={3},
-    pages={279-315},
-    doi={10.1109/MGRS.2022.3187652}
-}
-```
-
 ---
 
 ## Convenient Access to Results and Support for Beginners
