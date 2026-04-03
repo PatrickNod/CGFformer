@@ -34,16 +34,14 @@ Below are the visualizations of our proposed network architecture:
 ### Code Structure
 
 - `model.py`: This file contains the complete implementation of the CGFformer network architecture. It includes the Cluster Adaptive Frequency Separation (`CAFS`) module utilizing K-means clustering for dynamic frequency extraction, the Dual-Stream Refinement (`DSR` via `MGB_FGB_Stage`) module with Transformer-based mutual guidance, and the Spatial-Frequency Attention (`SFA`) module for feature integration. It also features the highly optimized `LinearMLP` and `Attention` blocks to ensure efficiency.
-- `train_distributed.py`: The main training script designed for multi-GPU environments using `torch.nn.DataParallel`. It includes the complete training pipeline, H5 dataset loading, pure L1 loss computation, an exponential learning rate decay strategy, and automatic checkpoint saving based on validation loss.
-- `visualization_cluster.py`: A dedicated visualization tool. It uses PyTorch forward hooks to extract the internal clustering index matrices from the `CAN_Filter` during inference. It processes H5 test datasets and saves the clustering maps as heatmaps, allowing users to visually inspect how the network adaptively partitions spatial features across different epochs.
+- `trainer_distributed.py`: The main training script designed for multi-GPU environments using `torch.nn.DataParallel`. It includes the complete training pipeline, H5 dataset loading, pure L1 loss computation, an exponential learning rate decay strategy, and automatic checkpoint saving based on validation loss.
+- `visualization_cluster.py`: A dedicated visualization tool. It uses PyTorch forward hooks to extract the internal clustering index matrices from the `CAFS`  module during inference. It processes H5 test datasets and saves the clustering maps as heatmaps, allowing users to visually inspect how the network adaptively partitions spatial features across different epochs.
 
 ### Dataset
 
 The experiments in this paper utilize the WorldView-3 (WV3) and GaoFen-2 (GF-2) datasets. Since we use the open-source datasets provided by the community, please download them from the following repository:
 
 🔗 **[liangjiandeng/PanCollection: Pansharpening Dataset](https://github.com/liangjiandeng/PanCollection)**
-
-If you use these datasets, please ensure you cite the following two foundational works:
 
 ```bibtex
 @ARTICLE{dengjig2022,
